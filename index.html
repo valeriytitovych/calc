@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./icons/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="calculator-container">
+    <div id="calculator-container">
+        <button id="close-btn"><span class="icon-closebtn"></span></button>
         <div class="output">
             <div class="current-operand-container">
                 <div class="equals-sigh">=</div>
@@ -16,6 +18,7 @@
             </div>
             <div class="previous-operand">213213122131</div>
         </div>
+        <div class="operators">
         <div class="btn-container">
             <button class="data-all-clear">CE</button>
             <button class="data-number">7</button>
@@ -35,8 +38,26 @@
             <button class="data-operation">/</button>
             <button class="data-operation">*</button>
             <button class="data-operation">-</button>
-            <button class="data-operation">+</button>
+            <button class="data-operation add-operation">+</button>
         </div>
+        <div id="btn-open-container" style="display:none;">
+            <button class="data-operation">inv</button>
+            <button class="data-operation">cos</button>
+            <button class="data-operation">in</button>
+            <button class="data-operation">?</button>
+            <button class="data-operation">(</button>
+            <button class="data-operation">rad</button>
+            <button class="data-operation">tan</button>
+            <button class="data-operation">log</button>
+            <button class="data-operation">p</button>
+            <button class="data-operation">)</button>
+            <button class="data-operation">sin</button>
+            <button class="data-operation">%</button>
+            <button class="data-operation">!</button>
+            <button class="data-operation">e</button>
+            <button class="data-operation">√‎</button>
+        </div>
+    </div>
     </div>
     <script src="./app.js"></script>
 </body>
