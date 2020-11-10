@@ -10,12 +10,6 @@ body {
     margin: 0;
     background-color: rgb(110, 130, 187);
 }
-.operators {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
 
 #calculator-container {
     height: 620px;
@@ -23,12 +17,14 @@ body {
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     background-color: rgb(26, 27, 40);
 }
 
+/*=== Output Styling ===*/
 .output {
     margin: 26px 20px;
 }
@@ -63,6 +59,13 @@ body {
     font-weight: 700;
     color: rgba(255, 255, 255, 0.6);
     text-align: end;
+}
+
+/* === Buttons Styling===*/
+.operators {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
 }
 
 .btn-container {
@@ -137,3 +140,58 @@ button {
     background-color: rgba(255, 255, 255, 0.3);
 
 }
+
+/*=== Slider Styling===*/
+.switch {
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 26px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:  rgba(255, 255, 255, 0.1);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px  rgba(255, 255, 255, 0.1);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
