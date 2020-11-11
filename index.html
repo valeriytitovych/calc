@@ -12,11 +12,13 @@
     <div id="calculator-container">
 
         <label class="switch">
-            <input id="checkbox" type="checkbox" onchange="changeStyle">
+            <input id="checkbox" type="checkbox" name="theme">
             <span class="slider round"></span>
           </label>
-          
+        
+        <button id="open-btn"><span class="icon-window-minimize-solid"></span></button>
         <button id="close-btn"><span class="icon-closebtn"></span></button>
+
         <div class="output">
             <div class="current-operand-container">
                 <div class="equals-sigh">=</div>
@@ -24,6 +26,7 @@
             </div>
             <div class="previous-operand">213213122131</div>
         </div>
+
         <div class="operators">
         <div class="btn-container">
             <button class="data-all-clear">CE</button>
@@ -46,6 +49,7 @@
             <button class="data-operation">-</button>
             <button class="data-operation add-operation">+</button>
         </div>
+        
         <div id="btn-open-container" style="display:none;">
             <button class="data-operation">inv</button>
             <button class="data-operation">cos</button>
