@@ -1,4 +1,5 @@
 * {
+<<<<<<< HEAD
     box-sizing: border-box;
 }
 
@@ -67,4 +68,239 @@ html {
     height: 110px;
     grid-column: 4; 
     grid-row: 6/8;
+=======
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+html {
+    --font-color: #fff;
+    --calc-bg: #1a1b28;
+    --btn-bg: #1e2435;
+    --btn-hover-effect: #373750;
+    --border-color: #2c2c33;
+}
+
+html[data-theme=light] {
+    --font-color: #30323D;
+    --calc-bg: #fff;
+    --btn-bg: #f2f8fc;
+    --btn-hover-effect: #c7e0f1;
+    --border-color: #d5d5d8;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(110, 130, 187);
+}
+
+#calculator-container {
+    height: 620px;
+    width: 340px;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.6), 0 6px 20px 0 rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: var(--calc-bg);
+}
+
+#calculator-container.light {
+    background-color: #fff;
+}
+
+/*=== Output Styling ===*/
+.output {
+    margin: 26px 20px;
+}
+
+.current-operand-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.equals-sigh {
+    font-size: 40px;
+    font-weight: 700;
+    color:  rgb(82, 201, 220);
+}
+
+.current-operand, .previous-operand {
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.current-operand{
+    padding-bottom: 20px;
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--font-color);
+}
+
+.previous-operand {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--font-color);
+    text-align: end;
+}
+
+/* === Buttons Styling===*/
+.operators {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.btn-container {
+    width: 302px;
+    height: 352px;
+    margin: 26px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button {
+    height: 64px;
+    width: 64px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.data-number{
+    background-color: var(--btn-bg);
+    color: var(--font-color);
+}
+
+.data-number:hover {
+    background-color: var(--btn-hover-effect);
+}
+
+.data-operation, .data-all-clear, .data-plus-minus, .data-equals  {
+    background-color: rgb(82, 201, 220);
+    color: #fff;
+}
+
+.data-operation:hover, 
+.data-all-clear:hover, 
+.data-plus-minus:hover, 
+.data-equals:hover {
+    background-color: rgb(0, 225, 255);
+}
+
+.data-operation.add-operation {
+    height: 135px;
+}
+
+#btn-open-container {
+    margin-right: 15px;
+    height: 352px;
+    width: 230px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#close-btn, #open-btn {
+    width: 40px;
+    height: 40px;
+    position:absolute;
+    background-color: var(--btn-bg);
+    color: var(--font-color);
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+}
+#close-btn {
+    right: 20px; 
+    top: 20px;
+}
+
+#open-btn {
+    top: 20px; 
+    right: 70px;
+}
+
+#close-btn:hover,
+#open-btn:hover {
+    background-color: var(--btn-hover-effect);
+
+}
+
+/*=== Slider Styling===*/
+.switch {
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 26px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:  rgba(255, 255, 255, 0.1);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px  rgba(255, 255, 255, 0.1);
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(18px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
+>>>>>>> 406359eada94402682c112c63de2f660e2222b64
 }
