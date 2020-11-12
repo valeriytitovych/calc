@@ -1,78 +1,9 @@
 * {
-<<<<<<< HEAD
-    box-sizing: border-box;
-}
-
-body,
-html {
-    height: 100%;        
-    margin: 0;
-    user-select: none;           
-}
-
-.wrapper {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.calc {
-    max-width: 300px;
-    background-color: #1a1b28;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
-    padding: 20px 24px;
-}
-
-.screen {
-    max-width: 100%;
-    height: 140px;
-    grid-column: 1/-1;
-    padding: 0;
-}
-
-.currentinput, .result, .resultinput {
-    font-size: 30px;
-    color: #53c9dc;
-}
-
-.currentinput, .resultinput {
-    width: 100%;
-    height: 60px;    
-    background-color: #1a1b28;
-    border: none;
-    outline: none;
-    text-align: right;
-}
-
-.calc-btn {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #53c9dc;
-    color: #fff;
-    cursor: pointer;
-    font: 20px bold;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-}
-
-.plus {
-    width: 50px;
-    height: 110px;
-    grid-column: 4; 
-    grid-row: 6/8;
-=======
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    user-select: none;
 }
 
 html {
@@ -136,19 +67,38 @@ body {
     word-break: break-all;
 }
 
-.current-operand{
+.current-operand {
+    width: 100%;
+    height: 60px;
+    background: none;
+    border: none;
     padding-bottom: 20px;
     font-size: 40px;
     font-weight: 700;
-    color: var(--font-color);
+    color:  rgb(82, 201, 220);
+    outline: none;
+    text-align: end;
+}
+
+.previous-operand-container {
+    width: 100%;
 }
 
 .previous-operand {
+    width: 100%;
+    height: 40px;
     margin-top: 20px;
-    font-size: 20px;
+    background: none;
+    border: none;
+    font-size: 30px;
     font-weight: 700;
-    color: var(--font-color);
+    color: rgb(82, 201, 220);
+    outline: none;
     text-align: end;
+}
+
+.current-operand::placeholder, .previous-operand::placeholder {
+    color:  rgb(82, 201, 220);
 }
 
 /* === Buttons Styling===*/
@@ -302,5 +252,4 @@ html.transition *:before,
 html.transition *:after {
   transition: all 750ms !important;
   transition-delay: 0 !important;
->>>>>>> 406359eada94402682c112c63de2f660e2222b64
 }

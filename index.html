@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,71 +9,70 @@
     <link rel="stylesheet" href="./icons/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<<<<<<< HEAD
 
-=======
+<body>
     <div id="calculator-container">
 
         <label class="switch">
             <input id="checkbox" type="checkbox" name="theme">
             <span class="slider round"></span>
-          </label>
-        
+        </label>
+
         <button id="open-btn"><span class="icon-window-minimize-solid"></span></button>
         <button id="close-btn"><span class="icon-closebtn"></span></button>
 
         <div class="output">
             <div class="current-operand-container">
                 <div class="equals-sigh">=</div>
-                <div class="current-operand">213123456</div>
+                <input class="current-operand" type="text" placeholder="0" readonly>
             </div>
             <div class="previous-operand">213213122131</div>
         </div>
 
         <div class="operators">
-        <div class="btn-container">
-            <button class="data-all-clear">CE</button>
-            <button class="data-number">7</button>
-            <button class="data-number">4</button>
-            <button class="data-number">1</button>
-            <button class="data-number">0</button>
-            <button class="data-plus-minus">+/-</button>
-            <button class="data-number">8</button>
-            <button class="data-number">5</button>
-            <button class="data-number">2</button>
-            <button class="data-number">.</button>
-            <button class="data-operation">%</button>
-            <button class="data-number">9</button>
-            <button class="data-number">6</button>
-            <button class="data-number">3</button>
-            <button class="data-equals">=</button>
-            <button class="data-operation">/</button>
-            <button class="data-operation">*</button>
-            <button class="data-operation">-</button>
-            <button class="data-operation add-operation">+</button>
-        </div>
-        
-        <div id="btn-open-container" style="display:none;">
-            <button class="data-operation">inv</button>
-            <button class="data-operation">cos</button>
-            <button class="data-operation">in</button>
-            <button class="data-operation">?</button>
-            <button class="data-operation">(</button>
-            <button class="data-operation">rad</button>
-            <button class="data-operation">tan</button>
-            <button class="data-operation">log</button>
-            <button class="data-operation">p</button>
-            <button class="data-operation">)</button>
-            <button class="data-operation">sin</button>
-            <button class="data-operation">%</button>
-            <button class="data-operation">!</button>
-            <button class="data-operation">e</button>
-            <button class="data-operation">√‎</button>
+            <div class="btn-container">
+                <button class="data-all-clear" id="clear">CE</button>
+                <button class="data-number number">7</button>
+                <button class="data-number number">4</button>
+                <button class="data-number number">1</button>
+                <button class="data-number number">0</button>
+                <button class="data-plus-minus operator">+/-</button>
+                <button class="data-number number">8</button>
+                <button class="data-number number">5</button>
+                <button class="data-number number">2</button>
+                <button class="data-number" id="decimal">.</button>
+                <button class="data-operation" operator>%</button>
+                <button class="data-number number">9</button>
+                <button class="data-number number">6</button>
+                <button class="data-number number">3</button>
+                <button class="data-equals operator" id="result">=</button>
+                <button class="data-operation operator">/</button>
+                <button class="data-operation operator">*</button>
+                <button class="data-operation operator">-</button>
+                <button class="data-operation add-operation operator">+</button>
+            </div>
+
+            <div id="btn-open-container" style="display:none;">
+                <button class="data-operation">inv</button>
+                <button class="data-operation">cos</button>
+                <button class="data-operation">in</button>
+                <button class="data-operation">?</button>
+                <button class="data-operation">(</button>
+                <button class="data-operation">rad</button>
+                <button class="data-operation">tan</button>
+                <button class="data-operation">log</button>
+                <button class="data-operation">p</button>
+                <button class="data-operation">)</button>
+                <button class="data-operation">sin</button>
+                <button class="data-operation">%</button>
+                <button class="data-operation">!</button>
+                <button class="data-operation">e</button>
+                <button class="data-operation">√‎</button>
+            </div>
         </div>
     </div>
-    </div>
->>>>>>> 406359eada94402682c112c63de2f660e2222b64
+
     <script src="./app.js"></script>
 </body>
+
 </html>
